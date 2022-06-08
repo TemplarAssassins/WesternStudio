@@ -1,0 +1,17 @@
+<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_5_4390)">
+<path d="M25.2494 16.2238V19.2346C25.2505 19.5142 25.1932 19.7908 25.081 20.0469C24.9688 20.303 24.8042 20.5329 24.5978 20.7219C24.3915 20.9108 24.1478 21.0547 23.8825 21.1442C23.6172 21.2338 23.3361 21.267 23.0572 21.2419C19.9628 20.9063 16.9904 19.851 14.3789 18.1608C11.9492 16.6199 9.88926 14.5641 8.34534 12.1392C6.64586 9.52099 5.58824 6.54008 5.25816 3.43795C5.23303 3.16042 5.26608 2.88071 5.3552 2.61663C5.44432 2.35254 5.58757 2.10987 5.77581 1.90407C5.96405 1.69826 6.19317 1.53383 6.44858 1.42123C6.70398 1.30864 6.98008 1.25036 7.2593 1.2501H10.2761C10.7641 1.2453 11.2372 1.41778 11.6072 1.73537C11.9773 2.05297 12.219 2.49401 12.2873 2.97629C12.4146 3.93982 12.6507 4.88587 12.9912 5.79642C13.1265 6.15563 13.1558 6.54602 13.0756 6.92133C12.9954 7.29665 12.809 7.64115 12.5387 7.91402L11.2616 9.18859C12.6931 11.7012 14.7776 13.7815 17.2951 15.2102L18.5722 13.9356C18.8456 13.6658 19.1908 13.4798 19.5669 13.3998C19.9429 13.3198 20.3341 13.349 20.694 13.484C21.6064 13.8238 22.5543 14.0595 23.5198 14.1865C24.0082 14.2553 24.4544 14.5009 24.7733 14.8765C25.0922 15.2521 25.2616 15.7317 25.2494 16.2238Z" stroke="#F5FF2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_5_4390" x="0.25" y="0.25" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_4390"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_4390" result="shape"/>
+</filter>
+</defs>
+</svg>
