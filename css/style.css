@@ -14,7 +14,7 @@ body {
     font-family: 'Open Sans';
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #282828;
 }
@@ -29,10 +29,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-}
-
-.title {
-    font-family: 'Raleway';
 }
 
 .container {
@@ -180,4 +176,132 @@ a {
     width: 100%;
     max-width: 770px;
     height: 740px;
+}
+
+.video-lesson {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    /*Придаёт блоку свойство родителя
+    */
+}
+
+.btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+
+.about {
+    padding: 120px 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 780px;
+}
+
+.swiper-slide {
+    padding-top: 60px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 545px;
+}
+
+.swiper-button-prev {
+    left: 140px;
+}
+
+.swiper-button-next {
+    right: 140px;
+}
+
+.swiper-button-prev,
+.swiper-button-next::after {
+    color: red;
+    cursor: pointer;
+}
+
+.about__content {
+    padding: 50px 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 450px;
+    height: 620px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.about-title {
+    margin-left: 10px;
+}
+
+.title::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 100%;
+    background-color: #FE0000;
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.about__name {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.color-red {
+    color: #CF132C;
+}
+
+.about__img {
+    width: 65%;
+    max-width: 100%;
+    height: 780px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+/* Не работает */
+
+.btn-yellow {
+    position: absolute;
+    width: 305px;
+    height: 50px;
+    bottom: 30px;
+    left: 40%;
+    font-weight: 700;
+    border-radius: 12px;
+    background-color: #F5FF2C;
+    color: #000000;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.btn-yellow:hover {
+    background-color: rgb(255, 153, 0);
 }
