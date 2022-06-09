@@ -488,3 +488,14 @@ a {
     font-size: 20px;
     font-weight: 400;
 }
+
+.perfomance__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.perfomance__list {
+    width: 25%;
+    margin: 25px 20px;
+}
