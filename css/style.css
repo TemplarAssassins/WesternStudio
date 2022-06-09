@@ -496,6 +496,27 @@ a {
 }
 
 .perfomance__list {
-    width: 25%;
+    width: 30%;
     margin: 25px 20px;
+}
+
+.photo {
+    padding: 120px 0;
+}
+
+.photo__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo__list {
+    width: 25%;
+    padding: 0 0 10px 10px;
+}
+
+.photo-img {
+    width: 100%;
+    height: 340px;
+    background-position: center;
+    background-size: cover;
 }
