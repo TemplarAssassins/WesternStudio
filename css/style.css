@@ -32,7 +32,7 @@ h6 {
 }
 
 .container {
-    width: 100;
+    width: 100%;
     max-width: 1385px;
     padding: 15px;
     margin: 0 auto;
@@ -519,4 +519,74 @@ a {
     height: 340px;
     background-position: center;
     background-size: cover;
+}
+
+.footer .container {
+    position: relative;
+}
+
+.footer__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 60px 50px;
+    max-width: 500px;
+    height: 660px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.call-yellow {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.phone {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.call-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.check {
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.check__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.call__item .btn-yellow {
+    position: absolute;
+    top: 80%;
+    left: 50px;
+}
+
+.input__inner input {
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #000;
+    border: 1px solid #808080;
+    padding: 16px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+.input__inf {
+    width: 380px;
 }
