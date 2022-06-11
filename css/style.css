@@ -613,3 +613,76 @@ a {
 .input__inf {
     width: 380px;
 }
+
+.modal-form {
+    width: 550px;
+}
+
+.modal-title {
+    margin: 25px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+}
+
+.modal-form__item input {
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid lightgray;
+    padding: 16px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.modal-form__item .check__inner {
+    margin-top: 20px;
+}
+
+.timetable {
+    padding: 120px 0;
+}
+
+.timetable__item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.timetable__list {
+    max-width: 25%;
+    padding: 0;
+    margin: 0 20px;
+    list-style: none;
+}
+
+.timetable__list-direction {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.timetable__list-info {
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.timetable__list-info::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d0d4e2;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.timetable__item-last {
+    justify-content: center;
+}
+
+.timetable__item-last .timetable__list {
+    margin: 0 80px;
+}
