@@ -1,688 +1,940 @@
-/* Стили для всего сайта */
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-    /*Внешние отступы (margin) не будут влиять на ширину и высоту блока*/
-}
-
-
-/* Тело */
-
-body {
-    font-family: 'Open Sans';
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-weight: 400;
-    color: #282828;
-}
-
-
-/* Заголовки */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
-
-.container {
-    width: 100%;
-    max-width: 1385px;
-    padding: 15px;
-    margin: 0 auto;
-}
-
-
-/* Скролл шапки */
-
-.header__fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation-name: showheader;
-    animation-duration: 1s;
-}
-
-@keyframes showheader {
-    0% {
-        opacity: 0;
-        top: -70px;
-    }
-    100% {
-        opacity: 1;
-        top: 0;
-    }
-}
-
-.header {
-    background-color: #000000;
-    width: 100%;
-    z-index: 10;
-}
-
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* Навигация */
-
-a {
-    text-decoration: none;
-}
-
-.nav__link {
-    display: inline-block;
-    margin: 0 35px;
-    padding-bottom: 5px;
-    color: #FFFFFF;
-    position: relative;
-}
-
-.nav__link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #ff5a30;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-}
-
-.nav__link:hover::after {
-    opacity: 1;
-}
-
-.header__contacts {
-    display: flex;
-    align-items: center;
-}
-
-.header__contact {
-    color: #fff;
-    display: flex;
-    transition: color 0.2s linear;
-}
-
-.header__contact:hover {
-    color: #ff5a30;
-}
-
-.header__contact img {
-    margin-right: 5px;
-}
-
-.contact__link--call {
-    margin-right: 20px;
-}
-
-.intro {
-    padding: 80px 0;
-}
-
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.intro__content {
-    max-width: 530px;
-}
-
-.intro__suptitle {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.intro__title {
-    font-family: 'Raleway';
-    font-size: 72px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.intro__title::before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 100%;
-    background-color: #F5FF2C;
-    position: absolute;
-    left: -15px;
-    bottom: 0;
-    z-index: -1;
-}
-
-.intro__info {
-    font-size: 36px;
-    margin-bottom: 70px;
-}
-
-.btn {
-    font-size: 26px;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-}
-
-.btn--red {
-    color: #fff;
-    background-color: #ff5a30;
-    border-radius: 12px;
-    padding: 12px 22px;
-}
-
-.btn--red:hover {
-    background-color: #DE1E1E;
-}
-
-.intro__img {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    max-width: 770px;
-    height: 740px;
-}
-
-.video-lesson {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 800px;
-    position: relative;
-    /*Придаёт блоку свойство родителя
+                                                                        /* Стили для всего сайта */
+                                                                        
+                                                                        *,
+                                                                        *:before,
+                                                                        *:after {
+                                                                            box-sizing: border-box;
+                                                                            /*Внешние отступы (margin) не будут влиять на ширину и высоту блока*/
+                                                                        }
+                                                                        /* Тело */
+                                                                        
+                                                                        body {
+                                                                            font-family: 'Open Sans';
+                                                                            margin: 0;
+                                                                            padding: 0;
+                                                                            font-size: 18px;
+                                                                            font-weight: 400;
+                                                                            color: #282828;
+                                                                        }
+                                                                        /* Заголовки */
+                                                                        
+                                                                        h1,
+                                                                        h2,
+                                                                        h3,
+                                                                        h4,
+                                                                        h5,
+                                                                        h6 {
+                                                                            margin: 0;
+                                                                        }
+                                                                        
+                                                                        .container {
+                                                                            width: 100%;
+                                                                            max-width: 1385px;
+                                                                            padding: 15px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        /* Скролл шапки */
+                                                                        
+                                                                        .header__fixed {
+                                                                            position: fixed;
+                                                                            top: 0;
+                                                                            left: 0;
+                                                                            animation-name: showheader;
+                                                                            animation-duration: 1s;
+                                                                        }
+                                                                        
+                                                                        @keyframes showheader {
+                                                                            0% {
+                                                                                opacity: 0;
+                                                                                top: -70px;
+                                                                            }
+                                                                            100% {
+                                                                                opacity: 1;
+                                                                                top: 0;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        .header {
+                                                                            background-color: #000000;
+                                                                            width: 100%;
+                                                                            z-index: 10;
+                                                                        }
+                                                                        
+                                                                        .header__inner {
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            align-items: center;
+                                                                            position: relative;
+                                                                        }
+                                                                        /* Навигация */
+                                                                        
+                                                                        a {
+                                                                            text-decoration: none;
+                                                                        }
+                                                                        
+                                                                        .nav__link {
+                                                                            display: inline-block;
+                                                                            margin: 0 35px;
+                                                                            padding-bottom: 5px;
+                                                                            color: #FFFFFF;
+                                                                            position: relative;
+                                                                        }
+                                                                        
+                                                                        .nav__link::after {
+                                                                            content: "";
+                                                                            display: block;
+                                                                            width: 100%;
+                                                                            height: 3px;
+                                                                            background-color: #ff5a30;
+                                                                            position: absolute;
+                                                                            bottom: 0;
+                                                                            z-index: 1;
+                                                                            opacity: 0;
+                                                                            transition: opacity 0.2s linear;
+                                                                        }
+                                                                        
+                                                                        .nav__link:hover::after {
+                                                                            opacity: 1;
+                                                                        }
+                                                                        
+                                                                        .header__contacts {
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                        }
+                                                                        
+                                                                        .header__contact {
+                                                                            color: #fff;
+                                                                            display: flex;
+                                                                            transition: color 0.2s linear;
+                                                                        }
+                                                                        
+                                                                        .header__contact:hover {
+                                                                            color: #ff5a30;
+                                                                        }
+                                                                        
+                                                                        .header__contact img {
+                                                                            margin-right: 5px;
+                                                                        }
+                                                                        
+                                                                        .contact__link--call {
+                                                                            margin-right: 20px;
+                                                                        }
+                                                                        
+                                                                        .intro {
+                                                                            padding: 80px 0;
+                                                                        }
+                                                                        
+                                                                        .wrapper {
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                            justify-content: space-between;
+                                                                        }
+                                                                        
+                                                                        .intro__content {
+                                                                            max-width: 530px;
+                                                                        }
+                                                                        
+                                                                        .intro__suptitle {
+                                                                            font-size: 48px;
+                                                                            font-weight: 600;
+                                                                            margin-bottom: 5px;
+                                                                        }
+                                                                        
+                                                                        .intro__title {
+                                                                            font-family: 'Raleway';
+                                                                            font-size: 72px;
+                                                                            font-weight: 700;
+                                                                            text-transform: uppercase;
+                                                                            margin-bottom: 20px;
+                                                                            position: relative;
+                                                                        }
+                                                                        
+                                                                        .intro__title::before {
+                                                                            content: "";
+                                                                            display: block;
+                                                                            width: 100px;
+                                                                            height: 100%;
+                                                                            background-color: #F5FF2C;
+                                                                            position: absolute;
+                                                                            left: -15px;
+                                                                            bottom: 0;
+                                                                            z-index: -1;
+                                                                        }
+                                                                        
+                                                                        .intro__info {
+                                                                            font-size: 36px;
+                                                                            margin-bottom: 70px;
+                                                                        }
+                                                                        
+                                                                        .btn {
+                                                                            font-size: 26px;
+                                                                            border: 0;
+                                                                            padding: 0;
+                                                                            cursor: pointer;
+                                                                            transition: background-color 0.2s linear;
+                                                                        }
+                                                                        
+                                                                        .btn--red {
+                                                                            color: #fff;
+                                                                            background-color: #ff5a30;
+                                                                            border-radius: 12px;
+                                                                            padding: 12px 22px;
+                                                                        }
+                                                                        
+                                                                        .btn--red:hover {
+                                                                            background-color: #DE1E1E;
+                                                                        }
+                                                                        
+                                                                        .intro__img {
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            width: 100%;
+                                                                            max-width: 770px;
+                                                                            height: 740px;
+                                                                        }
+                                                                        
+                                                                        .video-lesson {
+                                                                            background-position: center;
+                                                                            background-repeat: no-repeat;
+                                                                            background-size: cover;
+                                                                            width: 100%;
+                                                                            height: 700px;
+                                                                            display: block;
+                                                                            position: relative;
+                                                                            /*Придаёт блоку свойство родителя
     */
-}
-
-.btn-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-}
-
-.about {
-    padding: 120px 0;
-}
-
-.swiper {
-    width: 100%;
-    height: 780px;
-}
-
-.about__swiper-slide {
-    padding-top: 60px;
-}
-
-.about-prev,
-.about-next {
-    position: absolute;
-    top: 545px;
-}
-
-.about-prev {
-    left: 140px;
-}
-
-.about-next {
-    right: 140px;
-}
-
-.about-prev,
-.about-next::after {
-    color: red;
-    cursor: pointer;
-}
-
-.about__content {
-    padding: 50px 30px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    width: 450px;
-    height: 620px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.title {
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    margin-bottom: 80px;
-}
-
-.about-title {
-    margin-left: 10px;
-    margin-bottom: 0;
-}
-
-.title::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 100%;
-    background-color: #FE0000;
-    position: absolute;
-    left: -15px;
-    bottom: 0;
-    z-index: 1;
-}
-
-.about__name {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.color-red {
-    color: #FE0000;
-}
-
-.about__img {
-    width: 65%;
-    max-width: 100%;
-    height: 780px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-}
-
-.btn-yellow {
-    position: absolute;
-    width: 305px;
-    height: 50px;
-    bottom: 30px;
-    left: 40%;
-    font-weight: 700;
-    border-radius: 12px;
-    background-color: #F5FF2C;
-    color: #000000;
-    cursor: pointer;
-    z-index: -1;
-}
-
-.btn-yellow:hover {
-    background-color: rgb(255, 153, 0);
-}
-
-.teachers__item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.teacher__inner-box {
-    width: 33.33333%;
-    padding: 0 20px;
-    margin-bottom: 50px;
-}
-
-.teacher__inner {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-.teacher-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 120%;
-    width: 100%;
-    /* border-radius: 5px; */
-}
-
-.teacher__content {
-    padding: 30px 25px;
-}
-
-.teacher-name {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.teacher-direction {
-    color: #818B9D;
-    text-transform: uppercase;
-}
-
-.teacher__text {
-    font-size: 16px;
-}
-
-.trial-lesson {
-    padding: 50px 0;
-    background-color: rgb(239, 239, 239);
-}
-
-.trial-lesson .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.trial-lesson {
-    font-size: 32px;
-}
-
-.direction {
-    position: relative;
-    padding: 50px;
-}
-
-.video-lesson {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-}
-
-.direction-inner {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.direction__inner-box {
-    width: 24%;
-    padding: 0 20px;
-    margin-bottom: 50px;
-}
-
-.direction__inner-1 {
-    width: 350px;
-    height: 400px;
-}
-
-.title-direction {
-    margin-left: 220px;
-}
-
-.btn-play-direction {
-    position: absolute;
-    top: 37%;
-    left: 39%;
-    z-index: 1;
-}
-
-.direction-name {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-}
-
-.hall-title {
-    color: #FFFFFF;
-}
-
-.hall {
-    padding: 110px 0;
-    background-color: #000000;
-}
-
-.hall-swiper {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 50px;
-}
-
-.hall__swiper img {
-    display: block;
-    width: 960px;
-    height: 550px;
-    object-fit: cover;
-}
-
-.hall-swiper .hall-prev,
-.hall-next::after {
-    color: #FE0000;
-}
-
-.hall-prev {
-    left: 20%;
-}
-
-.hall-next {
-    right: 30%;
-}
-
-.hall-swiper .swiper-pagination-bullet {
-    background-color: #818b9d;
-}
-
-.hall-swiper .swiper-pagination-bullet-active-main {
-    background-color: #818b9d;
-}
-
-.price {
-    padding: 120px 0;
-}
-
-.price__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.price-title {
-    font-size: 26px;
-    font-weight: 600;
-    text-transform: uppercase;
-    width: 300px;
-}
-
-.price-num {
-    font-size: 26px;
-    font-weight: 600;
-    text-transform: uppercase;
-    width: 90px;
-}
-
-.price-num span {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.perfomance__item {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.perfomance__list {
-    width: 30%;
-    margin: 25px 20px;
-}
-
-.photo {
-    padding: 120px 0;
-}
-
-.photo__item {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.photo__list {
-    width: 25%;
-    padding: 0 0 10px 10px;
-}
-
-.photo-img {
-    width: 100%;
-    height: 340px;
-    background-position: center;
-    background-size: cover;
-}
-
-.footer .container {
-    position: relative;
-}
-
-.footer__inner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 60px 50px;
-    max-width: 500px;
-    height: 660px;
-    color: #fff;
-    border-radius: 10px;
-    background-color: #000;
-    z-index: 1;
-}
-
-.call-yellow {
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: yellow;
-}
-
-.phone {
-    font-size: 32px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 30px;
-}
-
-.call-text {
-    font-size: 20px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-weight: 700;
-}
-
-.check {
-    padding-left: 15px;
-    font-size: 12px;
-}
-
-.check__inner {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.call__item .btn-yellow {
-    position: absolute;
-    top: 80%;
-    left: 50px;
-}
-
-.input__inner input {
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 16px;
-    background-color: #000;
-    border: 1px solid #808080;
-    padding: 16px;
-    margin-bottom: 30px;
-    color: #FFFFFF;
-}
-
-.input__inf {
-    width: 380px;
-}
-
-.modal-form {
-    width: 550px;
-}
-
-.modal-title {
-    margin: 25px;
-    font-size: 20px;
-    color: #000;
-    font-weight: 700;
-}
-
-.modal-form__item input {
-    font-size: 14px;
-    line-height: 16px;
-    border: 1px solid lightgray;
-    padding: 16px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-}
-
-.modal-form__item .check__inner {
-    margin-top: 20px;
-}
-
-.timetable {
-    padding: 120px 0;
-}
-
-.timetable__item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.timetable__list {
-    max-width: 25%;
-    padding: 0;
-    margin: 0 20px;
-    list-style: none;
-}
-
-.timetable__list-direction {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.timetable__list-info {
-    padding-bottom: 10px;
-    margin-bottom: 12px;
-    position: relative;
-}
-
-.timetable__list-info::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #d0d4e2;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-}
-
-.timetable__item-last {
-    justify-content: center;
-}
-
-.timetable__item-last .timetable__list {
-    margin: 0 80px;
-}
+                                                                        }
+                                                                        
+                                                                        .btn-play {
+                                                                            position: absolute;
+                                                                            top: 50%;
+                                                                            left: 50%;
+                                                                            z-index: 1;
+                                                                        }
+                                                                        
+                                                                        .video-block {
+                                                                            width: 100%;
+                                                                        }
+                                                                        
+                                                                        .about {
+                                                                            padding: 120px 0;
+                                                                        }
+                                                                        
+                                                                        .swiper {
+                                                                            width: 100%;
+                                                                            height: 780px;
+                                                                        }
+                                                                        
+                                                                        .about__swiper-slide {
+                                                                            padding-top: 60px;
+                                                                        }
+                                                                        
+                                                                        .about-prev,
+                                                                        .about-next {
+                                                                            position: absolute;
+                                                                            top: 545px;
+                                                                        }
+                                                                        
+                                                                        .about-prev {
+                                                                            left: 140px;
+                                                                            outline: none;
+                                                                        }
+                                                                        
+                                                                        .about-next {
+                                                                            right: 140px;
+                                                                            outline: none;
+                                                                        }
+                                                                        
+                                                                        .about-prev,
+                                                                        .about-next::after {
+                                                                            color: red;
+                                                                            cursor: pointer;
+                                                                        }
+                                                                        
+                                                                        .about__content {
+                                                                            padding: 50px 30px;
+                                                                            background-color: #fff;
+                                                                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                                                                            width: 450px;
+                                                                            height: 620px;
+                                                                            border-radius: 5px;
+                                                                            position: relative;
+                                                                        }
+                                                                        
+                                                                        .title {
+                                                                            padding-left: 15px;
+                                                                            font-size: 36px;
+                                                                            font-weight: bold;
+                                                                            text-transform: uppercase;
+                                                                            position: relative;
+                                                                            margin-bottom: 80px;
+                                                                        }
+                                                                        
+                                                                        .about-title {
+                                                                            margin-left: 10px;
+                                                                            margin-bottom: 0;
+                                                                        }
+                                                                        
+                                                                        .title::before {
+                                                                            content: "";
+                                                                            display: block;
+                                                                            width: 5px;
+                                                                            height: 100%;
+                                                                            background-color: #FE0000;
+                                                                            position: absolute;
+                                                                            left: 0;
+                                                                            bottom: 0;
+                                                                            z-index: 1;
+                                                                        }
+                                                                        
+                                                                        .about__name {
+                                                                            text-transform: uppercase;
+                                                                            font-weight: bold;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                        
+                                                                        .color-red {
+                                                                            color: #FE0000;
+                                                                        }
+                                                                        
+                                                                        .about__img {
+                                                                            width: 65%;
+                                                                            max-width: 100%;
+                                                                            height: 780px;
+                                                                            position: absolute;
+                                                                            top: 0;
+                                                                            right: 0;
+                                                                            z-index: -1;
+                                                                            background-repeat: no-repeat;
+                                                                            background-size: cover;
+                                                                            border-radius: 10px;
+                                                                        }
+                                                                        
+                                                                        .btn-yellow {
+                                                                            position: absolute;
+                                                                            width: 305px;
+                                                                            height: 50px;
+                                                                            bottom: 30px;
+                                                                            left: 40%;
+                                                                            font-weight: 700;
+                                                                            border-radius: 12px;
+                                                                            background-color: #F5FF2C;
+                                                                            color: #000000;
+                                                                            cursor: pointer;
+                                                                            z-index: -1;
+                                                                        }
+                                                                        
+                                                                        .btn-yellow:hover {
+                                                                            background-color: rgb(255, 153, 0);
+                                                                        }
+                                                                        
+                                                                        .teachers__item {
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            flex-wrap: wrap;
+                                                                        }
+                                                                        
+                                                                        .teacher__inner-box {
+                                                                            width: 33.33333%;
+                                                                            padding: 0 20px;
+                                                                            margin-bottom: 50px;
+                                                                        }
+                                                                        
+                                                                        .teacher__inner {
+                                                                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                                                                        }
+                                                                        
+                                                                        .teacher-img {
+                                                                            background-size: cover;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            padding-top: 120%;
+                                                                            width: 100%;
+                                                                            /* border-radius: 5px; */
+                                                                        }
+                                                                        
+                                                                        .teacher__content {
+                                                                            padding: 30px 25px;
+                                                                        }
+                                                                        
+                                                                        .teacher-name {
+                                                                            font-size: 24px;
+                                                                            font-weight: bold;
+                                                                        }
+                                                                        
+                                                                        .teacher-direction {
+                                                                            color: #818B9D;
+                                                                            text-transform: uppercase;
+                                                                        }
+                                                                        
+                                                                        .teacher__text {
+                                                                            font-size: 16px;
+                                                                        }
+                                                                        
+                                                                        .trial-lesson {
+                                                                            padding: 50px 0;
+                                                                            background-color: rgb(239, 239, 239);
+                                                                        }
+                                                                        
+                                                                        .trial-lesson .container {
+                                                                            display: flex;
+                                                                            justify-content: space-around;
+                                                                            align-items: center;
+                                                                        }
+                                                                        
+                                                                        .trial-lesson {
+                                                                            font-size: 32px;
+                                                                        }
+                                                                        
+                                                                        .direction {
+                                                                            position: relative;
+                                                                            padding: 50px;
+                                                                        }
+                                                                        
+                                                                        .video-lesson {
+                                                                            max-width: 100%;
+                                                                            max-height: 100%;
+                                                                            position: relative;
+                                                                            background-size: cover;
+                                                                            background-position: center;
+                                                                            background-repeat: no-repeat;
+                                                                            border-radius: 20px;
+                                                                        }
+                                                                        
+                                                                        .direction-inner {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            flex-wrap: wrap;
+                                                                        }
+                                                                        
+                                                                        .direction__inner-box {
+                                                                            width: 25%;
+                                                                            padding: 0 20px;
+                                                                            margin-bottom: 50px;
+                                                                        }
+                                                                        
+                                                                        .direction__inner-1 {
+                                                                            max-width: 350px;
+                                                                            height: 400px;
+                                                                        }
+                                                                        
+                                                                        .title-direction {
+                                                                            margin-left: 220px;
+                                                                        }
+                                                                        
+                                                                        .btn-play-direction {
+                                                                            position: absolute;
+                                                                            top: 37%;
+                                                                            left: 39%;
+                                                                            z-index: 1;
+                                                                        }
+                                                                        
+                                                                        .direction-name {
+                                                                            font-size: 32px;
+                                                                            font-weight: bold;
+                                                                            color: #ffffff;
+                                                                            text-transform: uppercase;
+                                                                            position: absolute;
+                                                                            bottom: 30px;
+                                                                            left: 50px;
+                                                                        }
+                                                                        
+                                                                        .hall-title {
+                                                                            color: #FFFFFF;
+                                                                        }
+                                                                        
+                                                                        .hall {
+                                                                            padding: 110px 0;
+                                                                            background-color: #000000;
+                                                                        }
+                                                                        
+                                                                        .hall-swiper {
+                                                                            width: 100%;
+                                                                            height: 100%;
+                                                                            padding-bottom: 50px;
+                                                                        }
+                                                                        
+                                                                        .hall__swiper img {
+                                                                            display: block;
+                                                                            width: 960px;
+                                                                            height: 550px;
+                                                                            object-fit: cover;
+                                                                        }
+                                                                        
+                                                                        .hall-swiper .hall-prev,
+                                                                        .hall-next::after {
+                                                                            color: #FE0000;
+                                                                            outline: none;
+                                                                        }
+                                                                        
+                                                                        .hall-prev {
+                                                                            left: 20%;
+                                                                            outline: none;
+                                                                        }
+                                                                        
+                                                                        .hall-next {
+                                                                            right: 30%;
+                                                                            outline: none;
+                                                                        }
+                                                                        
+                                                                        .hall-swiper .swiper-pagination-bullet {
+                                                                            background-color: #818b9d;
+                                                                        }
+                                                                        
+                                                                        .hall-swiper .swiper-pagination-bullet-active-main {
+                                                                            background-color: #818b9d;
+                                                                        }
+                                                                        
+                                                                        .price {
+                                                                            padding: 120px 0;
+                                                                        }
+                                                                        
+                                                                        .price__list {
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            align-items: center;
+                                                                            margin-bottom: 60px;
+                                                                        }
+                                                                        
+                                                                        .price-title {
+                                                                            font-size: 26px;
+                                                                            font-weight: 600;
+                                                                            text-transform: uppercase;
+                                                                            width: 300px;
+                                                                        }
+                                                                        
+                                                                        .price-num {
+                                                                            font-size: 26px;
+                                                                            font-weight: 600;
+                                                                            text-transform: uppercase;
+                                                                            width: 90px;
+                                                                        }
+                                                                        
+                                                                        .price-num span {
+                                                                            font-size: 20px;
+                                                                            font-weight: 400;
+                                                                        }
+                                                                        
+                                                                        .perfomance__item {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            flex-wrap: wrap;
+                                                                        }
+                                                                        
+                                                                        .perfomance__list {
+                                                                            width: 30%;
+                                                                            margin: 25px 20px;
+                                                                        }
+                                                                        
+                                                                        .perfomance__list img {
+                                                                            max-width: 100%;
+                                                                        }
+                                                                        
+                                                                        .photo {
+                                                                            padding: 120px 0;
+                                                                        }
+                                                                        
+                                                                        .photo__item {
+                                                                            display: flex;
+                                                                            flex-wrap: wrap;
+                                                                        }
+                                                                        
+                                                                        .photo__list {
+                                                                            width: 25%;
+                                                                            padding: 0 0 10px 10px;
+                                                                        }
+                                                                        
+                                                                        .photo-img {
+                                                                            width: 100%;
+                                                                            height: 340px;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                        }
+                                                                        
+                                                                        .footer .container {
+                                                                            position: relative;
+                                                                        }
+                                                                        
+                                                                        .footer__inner {
+                                                                            position: absolute;
+                                                                            top: 0;
+                                                                            right: 0;
+                                                                            padding: 60px 50px;
+                                                                            max-width: 500px;
+                                                                            height: 660px;
+                                                                            color: #fff;
+                                                                            border-radius: 10px;
+                                                                            background-color: #000;
+                                                                            z-index: 1;
+                                                                        }
+                                                                        
+                                                                        .call-yellow {
+                                                                            font-weight: 600;
+                                                                            font-size: 24px;
+                                                                            margin-bottom: 20px;
+                                                                            color: yellow;
+                                                                        }
+                                                                        
+                                                                        .phone {
+                                                                            font-size: 32px;
+                                                                            font-weight: 600;
+                                                                            color: #fff;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                        
+                                                                        .call-text {
+                                                                            font-size: 20px;
+                                                                            margin: 30px 0;
+                                                                            font-weight: 700;
+                                                                        }
+                                                                        
+                                                                        .check {
+                                                                            padding-left: 15px;
+                                                                            font-size: 12px;
+                                                                        }
+                                                                        
+                                                                        .check__inner {
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                        
+                                                                        .call__item .btn-yellow {
+                                                                            position: absolute;
+                                                                            top: 80%;
+                                                                            left: 50px;
+                                                                        }
+                                                                        
+                                                                        .input__inner input {
+                                                                            border-radius: 10px;
+                                                                            font-size: 14px;
+                                                                            line-height: 16px;
+                                                                            background-color: #000;
+                                                                            border: 1px solid #808080;
+                                                                            padding: 16px;
+                                                                            margin-bottom: 30px;
+                                                                            color: #FFFFFF;
+                                                                        }
+                                                                        
+                                                                        .input__inf {
+                                                                            width: 380px;
+                                                                        }
+                                                                        
+                                                                        .modal-form {
+                                                                            width: 550px;
+                                                                        }
+                                                                        
+                                                                        .modal-title {
+                                                                            margin: 25px;
+                                                                            font-size: 20px;
+                                                                            color: #000;
+                                                                            font-weight: 700;
+                                                                        }
+                                                                        
+                                                                        .modal-form__item input {
+                                                                            font-size: 14px;
+                                                                            line-height: 16px;
+                                                                            border: 1px solid lightgray;
+                                                                            padding: 16px;
+                                                                            margin-bottom: 25px;
+                                                                            border-radius: 10px;
+                                                                        }
+                                                                        
+                                                                        .modal-form__item .check__inner {
+                                                                            margin-top: 20px;
+                                                                        }
+                                                                        
+                                                                        .timetable {
+                                                                            padding: 120px 0;
+                                                                        }
+                                                                        
+                                                                        .timetable__item {
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            width: 100%;
+                                                                            margin-bottom: 10px;
+                                                                        }
+                                                                        
+                                                                        .timetable__list {
+                                                                            max-width: 25%;
+                                                                            padding: 0;
+                                                                            margin: 0 20px;
+                                                                            list-style: none;
+                                                                        }
+                                                                        
+                                                                        .timetable__list-direction {
+                                                                            font-weight: 700;
+                                                                            font-size: 20px;
+                                                                            margin-bottom: 15px;
+                                                                        }
+                                                                        
+                                                                        .timetable__list-info {
+                                                                            padding-bottom: 10px;
+                                                                            margin-bottom: 12px;
+                                                                            position: relative;
+                                                                        }
+                                                                        
+                                                                        .timetable__list-info::after {
+                                                                            content: "";
+                                                                            display: block;
+                                                                            width: 100%;
+                                                                            height: 1px;
+                                                                            background-color: #d0d4e2;
+                                                                            position: absolute;
+                                                                            bottom: 0;
+                                                                            z-index: 1;
+                                                                        }
+                                                                        
+                                                                        .timetable__item-last {
+                                                                            justify-content: center;
+                                                                        }
+                                                                        
+                                                                        .timetable__item-last .timetable__list {
+                                                                            margin: 0 80px;
+                                                                        }
+                                                                        
+                                                                        .menu-link {
+                                                                            display: none;
+                                                                        }
+                                                                        /* Адаптив */
+                                                                        
+                                                                        @media (max-width: 1400px) {
+                                                                            .title {
+                                                                                margin-bottom: 40px;
+                                                                            }
+                                                                            .menu-link {
+                                                                                width: 60px;
+                                                                                height: 60px;
+                                                                                display: block;
+                                                                                position: relative;
+                                                                                background-color: inherit;
+                                                                                border: 0;
+                                                                                outline: 0;
+                                                                            }
+                                                                            .menu-link__item {
+                                                                                display: block;
+                                                                                height: 2px;
+                                                                                width: 35px;
+                                                                                background-color: #fff;
+                                                                                position: absolute;
+                                                                                top: 50%;
+                                                                            }
+                                                                            .menu-link__item::before {
+                                                                                content: "";
+                                                                                display: block;
+                                                                                height: 2px;
+                                                                                width: 35px;
+                                                                                background-color: #fff;
+                                                                                position: absolute;
+                                                                                top: 15px;
+                                                                            }
+                                                                            .menu-link__item::after {
+                                                                                content: "";
+                                                                                display: block;
+                                                                                height: 2px;
+                                                                                width: 35px;
+                                                                                background-color: #fff;
+                                                                                position: absolute;
+                                                                                top: -15px;
+                                                                            }
+                                                                            .nav {
+                                                                                padding: 30px 10px;
+                                                                                position: absolute;
+                                                                                top: 100px;
+                                                                                right: 0;
+                                                                                z-index: 1;
+                                                                                background-color: #000;
+                                                                                display: none;
+                                                                                flex-direction: column;
+                                                                            }
+                                                                            .nav__link {
+                                                                                font-size: 30px;
+                                                                                margin-bottom: 10px;
+                                                                                padding-bottom: 25px;
+                                                                            }
+                                                                            .nav.active {
+                                                                                height: 340px;
+                                                                                display: flex;
+                                                                                flex-direction: column;
+                                                                            }
+                                                                            .intro__suptitle {
+                                                                                font-size: 40px;
+                                                                            }
+                                                                            .intro__title {
+                                                                                font-size: 60px;
+                                                                            }
+                                                                            .intro__info {
+                                                                                font-size: 22px;
+                                                                            }
+                                                                            .direction__inner-box {
+                                                                                padding: 0 10px;
+                                                                                margin-bottom: 30px;
+                                                                            }
+                                                                            .direction-name {
+                                                                                font-size: 22px;
+                                                                                left: 10px;
+                                                                            }
+                                                                            .btn-play-direction {
+                                                                                width: 25%;
+                                                                                top: 40%;
+                                                                                left: 40%;
+                                                                            }
+                                                                            .hall {
+                                                                                padding: 50px 0;
+                                                                            }
+                                                                            .timetable {
+                                                                                padding: 50px 0;
+                                                                            }
+                                                                            .price {
+                                                                                padding: 50px 0;
+                                                                            }
+                                                                            .price__list {
+                                                                                margin-bottom: 30px;
+                                                                            }
+                                                                            .footer__inner {
+                                                                                padding: 15px 25px;
+                                                                            }
+                                                                            .call-text {
+                                                                                margin: 15px 0;
+                                                                            }
+                                                                            .footer__inner {
+                                                                                height: 560px;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        @media (max-width: 990px) {
+                                                                            .intro__img {
+                                                                                display: none;
+                                                                            }
+                                                                            .video-lesson {
+                                                                                max-height: 400px;
+                                                                            }
+                                                                            body {
+                                                                                font-size: 16px;
+                                                                            }
+                                                                            .title {
+                                                                                font-size: 26px;
+                                                                            }
+                                                                            .about {
+                                                                                padding: 50px 0 0;
+                                                                            }
+                                                                            .about-title {
+                                                                                font-size: 26px;
+                                                                                margin-bottom: 30px;
+                                                                            }
+                                                                            .about__content {
+                                                                                width: 400px;
+                                                                                height: 520px;
+                                                                            }
+                                                                            .about-prev,
+                                                                            .about-next {
+                                                                                position: absolute;
+                                                                                top: 480px;
+                                                                            }
+                                                                            .about__name {
+                                                                                margin-bottom: 15px;
+                                                                            }
+                                                                            .about__img {
+                                                                                height: 660px;
+                                                                            }
+                                                                            .btn-yellow {
+                                                                                width: 240px;
+                                                                            }
+                                                                            .teacher__inner-box {
+                                                                                padding: 0 10px;
+                                                                                margin-bottom: 25px;
+                                                                            }
+                                                                            .teacher__content {
+                                                                                padding: 10px 20px;
+                                                                            }
+                                                                            .teacher-name {
+                                                                                font-size: 20px;
+                                                                            }
+                                                                            .trial-lesson {
+                                                                                font-size: 26px;
+                                                                                padding: 0;
+                                                                            }
+                                                                            .title-direction {
+                                                                                margin-left: 0;
+                                                                            }
+                                                                            .direction__inner-box {
+                                                                                width: 33%;
+                                                                            }
+                                                                            .timetable {
+                                                                                padding: 50px 0 0;
+                                                                            }
+                                                                            .price {
+                                                                                padding: 0;
+                                                                            }
+                                                                            .price-title {
+                                                                                font-size: 22px;
+                                                                            }
+                                                                            .price__list {
+                                                                                margin-bottom: 15px;
+                                                                            }
+                                                                            .price__list:first {
+                                                                                margin-bottom: 10px;
+                                                                            }
+                                                                            .photo {
+                                                                                padding: 50px 0;
+                                                                            }
+                                                                            .footer__inner {
+                                                                                height: 490px;
+                                                                                max-width: 422px;
+                                                                            }
+                                                                            .photo-img {
+                                                                                height: 230px;
+                                                                            }
+                                                                            .perfomance__list {
+                                                                                width: 44%;
+                                                                            }
+                                                                            .call-yellow {
+                                                                                font-size: 18px;
+                                                                            }
+                                                                            .phone {
+                                                                                font-size: 26px;
+                                                                            }
+                                                                            .call-text {
+                                                                                font-size: 15px;
+                                                                            }
+                                                                            .input__inf {
+                                                                                width: 350px;
+                                                                            }
+                                                                            .input__inner input {
+                                                                                margin-bottom: 15px;
+                                                                            }
+                                                                            .footer__inner {
+                                                                                position: absolute;
+                                                                                top: 60px;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        @media (max-width: 768px) {
+                                                                            .header__logo {
+                                                                                display: none;
+                                                                            }
+                                                                            .intro__content {
+                                                                                max-width: 360px;
+                                                                                margin: 0 auto;
+                                                                            }
+                                                                            .btn-play {
+                                                                                top: 38%;
+                                                                                left: 42%;
+                                                                            }
+                                                                            .teacher__inner-box {
+                                                                                width: 50%;
+                                                                            }
+                                                                            .timetable__item {
+                                                                                flex-wrap: wrap;
+                                                                            }
+                                                                            .timetable__list {
+                                                                                max-width: 32%;
+                                                                            }
+                                                                            .timetable__item-last {
+                                                                                justify-content: space-between;
+                                                                            }
+                                                                            .timetable__item-last .timetable__list {
+                                                                                margin: 0;
+                                                                            }
+                                                                        }
