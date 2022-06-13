@@ -1166,7 +1166,7 @@
                 Контакты
             </h2>
             <div class="footer__inner">
-                <div class="call__item">
+                <form class="call__item form">
                     <div class="call">
                         <p class="call-yellow">Звони</p>
                     </div>
@@ -1177,8 +1177,8 @@
                         или укажи свой номер телефона и мы перезвоним
                     </div>
                     <div class="input__inner">
-                        <input class="input__inf" name="Имя" type="text" placeholder="Ваше имя" />
-                        <input class="input__inf" name="Телефон" type="tel" placeholder="Ваш телефон" />
+                        <input class="input__inf" name="Имя" type="text" placeholder="Ваше имя" data-validate-field="name"/>
+                        <input class="input__inf" name="Телефон" type="tel" placeholder="Ваш телефон" data-validate-field="tel"/>
                         <div class="check__inner">
                             <input type="checkbox" id="check" />
                             <label for="check" class="check">Нажимая на кнопку, Вы даёте согласие на обработку персональных
@@ -1186,20 +1186,20 @@
                         </div>
                     </div>
                     <button class="btn btn-yellow">Заказать звонок</button>
-                </div>
+                </form>
             </div>
         </div>
         <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A68ef51c9225037856310a508f88370d5e9865016569bf669ec151887d12c77c8&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
     </section>
 
 
-    <div class="modal-form" id="modal-form" style="display: none">
+    <div class="modal-form form" id="modal-form" style="display: none">
         <form class="modal-form__item" action="" method="post">
             <div class="modal-title">
                 Укажите ваш номер телефона и мы свяжемся с вами
             </div>
-            <input class="input__inf" name="Имя" type="text" placeholder="Ваше имя" />
-            <input class="input__inf" name="Телефон" type="tel" placeholder="Ваш телефон" />
+            <input class="input__inf" name="Имя" type="text" placeholder="Ваше имя" data-validate-field="name" />
+            <input class="input__inf" name="Телефон" type="tel" placeholder="Ваш телефон" data-validate-field="tel" />
             <button class="btn btn--red">Отправить</button>
             <div class="check__inner">
                 <input type="checkbox" id="modal-check" name="check" />
@@ -1216,6 +1216,7 @@
 
 
     <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="libs/inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js">

@@ -45,3 +45,11 @@ $(".menu-link").on("click", function(event) {
     $(this).toggleClass("menu-link__active");
     $("#nav").toggleClass("active");
 });
+
+
+const form = document.querySelector('.form');
+const telSelector = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telSelector);
+
+const validation = new JustValidate('#form');
