@@ -836,6 +836,16 @@ a {
     .footer__inner {
         height: 560px;
     }
+    .nav {
+        padding: 30px 10px;
+        position: absolute;
+        top: 92px;
+        right: -16px;
+    }
+    .nav.active {
+    box-shadow: 0px 0px 10px rgb(251, 251, 251);
+    }
+
 }
 
 @media (max-width: 990px) {
@@ -943,9 +953,20 @@ a {
         position: absolute;
         top: 60px;
     }
+
+    .nav__link {
+        font-size: 24px;
+    }
+
+    .nav {
+        top: 92px;
+        right: -15px;
+    }
+
 }
 
 @media (max-width: 768px) {
+
     .header__logo {
         display: none;
     }
@@ -957,6 +978,16 @@ a {
         top: 38%;
         left: 42%;
     }
+
+    .nav__link {
+        font-size: 15px;
+        margin: 0 10px;
+    }
+
+    .nav.active {
+        height: 200px;
+    }
+
     .teacher__inner-box {
         width: 50%;
     }
@@ -978,9 +1009,17 @@ a {
     }
 
     .nav {
-        top: 68px;
-        right: -23px;
+        top: 63px;
+        right: -15px;
     }
+
+    .btn-yellow {
+        width: 305px;
+        height: 50px;
+        bottom: 10px;
+        left: 20%;
+    }
+
 }
 
 @media (max-width: 440px) {
@@ -1012,8 +1051,8 @@ a {
     }
 
     .btn-play {
-        top: 28%;
-        left: 39%;
+        top: 25%;
+        left: 35%;
     }
 
     .direction__inner-box {
@@ -1119,36 +1158,66 @@ a {
     }
 
     .nav {
-        top: 69px;
+        top: 56px;
         right: -15px;
+        padding: 30px 0;
     }
 
     .nav__link {
-        font-size: 21px;
-        margin-bottom: 6px;
-        padding-bottom: 21px;
+        font-size: 11px;
+        margin-bottom: -12px;
+        padding-bottom: 20px;
     }
 
     .nav.active {
-        height: 260px;
-        display: flex;
-        flex-direction: column;
+        border-radius: 10px;
+        height: 140px;
     }
 
     .btn {
         font-size: 22px;
     }
+
+    .about__content {
+        width: 100%;
+        height: 400px;
+    }
+
+    .about__text {
+        font-size: 14px;
+    }
+
+    .about-prev, .about-next {
+        top: 375px;
+    }
+
+    .about-prev {
+        left: 100px;
+    }
+
+    .about-next {
+        right: 100px;
+    }
+
+    .header__contact {
+        font-size: 12px;
+    }
+
+    .teacher-name {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 320px) {
 
-    .nav.active {
+    .nav .active {
         height: 250px;
     }
    
     .nav {
-        top: 56px;
-        right: -35px;
+        top: 59px;
+        right: -15px;
     }
 
     .fancybox__content {
@@ -1204,7 +1273,7 @@ a {
     }
   
     .about__content {
-        width: 300px;
+        width: 100%;
         height: 400px;
     }
 

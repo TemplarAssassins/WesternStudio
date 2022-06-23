@@ -1,25 +1,25 @@
-const SwiperAbout = new Swiper(".about-swiper", { // инициализируем слайдер 
-    effect: "fade", // 'плавно' скрывает предыдущий слайд 
-    navigation: { // стрелки навигации 
-        nextEl: ".swiper-button-next", // стрелка левая
-        prevEl: ".swiper-button-prev", // стрелка правая 
+const SwiperAbout = new Swiper(".about-swiper", { 
+    effect: "fade", 
+    navigation: { 
+        nextEl: ".swiper-button-next", 
+        prevEl: ".swiper-button-prev", 
     },
 });
 
 
-const SwiperHale = new Swiper(".hall-swiper", { // инициализируем слайдер 
+const SwiperHale = new Swiper(".hall-swiper", { 
     slidesPerView: 1,
-    breakpoints: { // настройки для разных разрешений
+    breakpoints: { 
         990: {
-            slidesPerView: 2, // показывает 2 слайда на экране
-            spaceBetween: 30, // отступы между слайдами
+            slidesPerView: 2, 
+            spaceBetween: 30, 
             centeredSlides: true,
-            initialSlide: 1, // показ слайда с определённого 
-            loop: true, // бесконечно повторение
-            speed: 1000, // Продолжительность перехода между слайдами
-            navigation: { // стрелки навигации 
-                nextEl: ".swiper-button-next", // стрелка левая
-                prevEl: ".swiper-button-prev", // стрелка правая 
+            initialSlide: 1, 
+            loop: true, 
+            speed: 1000, 
+            navigation: { 
+                nextEl: ".swiper-button-next", 
+                prevEl: ".swiper-button-prev", 
             },
             pagination: {
                 el: ".swiper-pagination",
@@ -52,4 +52,45 @@ const telSelector = form.querySelector('input[type="tel"]');
 const inputMask = new Inputmask('+7 (999) 999-99-99');
 inputMask.mask(telSelector);
 
-const validation = new JustValidate('#form');
+
+const validation = new JustValidate('.form');
+
+validation
+  .addField('.input-name', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Введите имя!'
+    }
+  ])
+  .addField('#check', [
+
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Поставте галочку'
+    }
+  ])
+  .addField('.input-tel', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Телефон обязателен',
+    },
+    {
+      rule: 'function',
+      validator: function() {
+        const phone = telSelector.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      },
+      errorMessage: 'Введите корректный телефон',
+    },
+  ])
